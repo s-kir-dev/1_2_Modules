@@ -60,10 +60,10 @@ class PlaceViewController: UIViewController {
     @objc func favoriteButtonTapped() {
         if favorites.contains(place) {
             favorites.remove(at: favorites.firstIndex(of: place)!)
-            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
         } else {
             favorites.append(place)
-            favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
     }
     
@@ -113,9 +113,9 @@ class PlaceViewController: UIViewController {
         }
         
         if favorites.contains(place) {
-            favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
-            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
         
         placeName.text = place.name
