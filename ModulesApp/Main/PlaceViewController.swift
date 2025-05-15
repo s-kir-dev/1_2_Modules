@@ -47,11 +47,23 @@ class PlaceViewController: UIViewController {
         setupUI(place: place)
                 
         rateButton.addTarget(self, action: #selector(rateButtonTapped), for: .touchUpInside)
+        
+        favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
     }
     
     @objc func starTapped(_ sender: UIButton) {
         if let selectedIndex = stars.firstIndex(of: sender) {
             fillStars(int: selectedIndex)
+        }
+    }
+    
+    @objc func favoriteButtonTapped() {
+        if favorites.contains(place) {
+            favorites.remove(at: favorites.firstIndex(of: place)!)
+            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        } else {
+            favorites.append(place)
+            favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
         }
     }
     
@@ -98,6 +110,12 @@ class PlaceViewController: UIViewController {
         } else {
             infoView.isHidden = false
             facilitiesView.isHidden = true
+        }
+        
+        if favorites.contains(place) {
+            favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
         
         placeName.text = place.name
