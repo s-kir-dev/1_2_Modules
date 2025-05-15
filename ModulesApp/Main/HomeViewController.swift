@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        collectionView.delegate = self
+        collectionView.reloadData()
     }
     
     @IBAction func segmentChanged(_ sender: Any) {

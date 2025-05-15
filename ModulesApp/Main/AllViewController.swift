@@ -23,14 +23,25 @@ class AllViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPlaceType" {
+            let destinationVC = segue.destination as! PlaceViewController
+            destinationVC.place = selectedPlace
+        }
+    }
 }
 
 extension AllViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == self.collectionView {
-            selectedPlace = sortedPlaces[indexPath.row]
-            performSegue(withIdentifier: "showPlace", sender: self)
-        }
+        selectedPlace = sortedPlaces[indexPath.row]
+        performSegue(withIdentifier: "showPlaceType", sender: self)
     }
 }
 

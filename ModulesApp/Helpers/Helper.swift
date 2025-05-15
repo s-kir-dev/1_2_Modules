@@ -165,13 +165,13 @@ func countRating(place: Place, showReviews: Bool, completion: @escaping((String)
                 let rating = Double(summa)/Double(kolvo)
                 let roundedRating = Double(rating*100).rounded()/100
                 if showReviews {
-                    completion("⭐️\(roundedRating) (\(kolvo)K Reviews")
+                    completion("⭐️\(roundedRating) (\(kolvo)K Reviews)")
                 } else {
                     completion("⭐️\(roundedRating)")
                 }
             } else {
                 if showReviews {
-                    completion("⭐️0 (0K Reviews")
+                    completion("⭐️0 (0K Reviews)")
                 } else {
                     completion("⭐️0")
                 }

@@ -144,7 +144,7 @@ Vacation</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUl-JJ-cZk">
                                                 <rect key="frame" x="0.0" y="31" width="393" height="330"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-fy-yJZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-fy-yJZ">
                                                         <rect key="frame" x="8" y="8" width="294" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="qvE-dS-Xho"/>
@@ -264,7 +264,7 @@ Vacation</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTO-lO-QKc">
                                                 <rect key="frame" x="0.0" y="361" width="393" height="240"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MV-5m-BQo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="2MV-5m-BQo">
                                                         <rect key="frame" x="8" y="8" width="294" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="B80-2Y-IZK"/>
@@ -827,6 +827,9 @@ Vacation</string>
                                                         <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="mqi-K4-6Bv" eventType="touchUpInside" id="eOZ-AZ-hqz"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Troitskoe suburb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PXD-b3-IVx">
                                                     <rect key="frame" x="8" y="161" width="165" height="35"/>
@@ -907,7 +910,7 @@ Vacation</string>
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I9w-ko-ptW">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="570"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1015"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-LM-psT">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="330"/>
@@ -916,7 +919,7 @@ Vacation</string>
                                                         <rect key="frame" x="8" y="8" width="377" height="314"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYU-HN-TuO">
-                                                        <rect key="frame" x="334" y="287" width="35" height="35"/>
+                                                        <rect key="frame" x="342" y="295" width="35" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="iYU-HN-TuO" secondAttribute="height" id="g0G-Zj-twR"/>
                                                             <constraint firstAttribute="height" constant="35" id="zRn-W7-srd"/>
@@ -930,21 +933,321 @@ Vacation</string>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="iYU-HN-TuO" secondAttribute="bottom" constant="8" id="4Ni-ef-dBU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iYU-HN-TuO" secondAttribute="bottom" id="4Ni-ef-dBU"/>
                                                     <constraint firstAttribute="bottom" secondItem="rI9-8w-g1I" secondAttribute="bottom" constant="8" id="OeM-bR-gwc"/>
                                                     <constraint firstAttribute="trailing" secondItem="rI9-8w-g1I" secondAttribute="trailing" constant="8" id="PMZ-TC-Fcm"/>
                                                     <constraint firstItem="rI9-8w-g1I" firstAttribute="top" secondItem="HgV-LM-psT" secondAttribute="top" constant="8" id="SaP-nu-H4Z"/>
                                                     <constraint firstItem="iYU-HN-TuO" firstAttribute="width" secondItem="iYU-HN-TuO" secondAttribute="height" id="YQw-rc-6pW"/>
                                                     <constraint firstAttribute="height" constant="330" id="ZjY-eL-xOb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iYU-HN-TuO" secondAttribute="trailing" constant="24" id="dwf-ZK-Qrl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iYU-HN-TuO" secondAttribute="trailing" constant="16" id="dwf-ZK-Qrl"/>
                                                     <constraint firstItem="rI9-8w-g1I" firstAttribute="leading" secondItem="HgV-LM-psT" secondAttribute="leading" constant="8" id="tWo-tX-10n"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-53-qiM">
-                                                <rect key="frame" x="0.0" y="330" width="393" height="240"/>
+                                                <rect key="frame" x="0.0" y="330" width="393" height="188"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="National Art Museum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-x6-pxX">
+                                                        <rect key="frame" x="8" y="8" width="377" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ogp-by-lF5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️ 4.7 (4K Reviews)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-Ye-mrz">
+                                                        <rect key="frame" x="8" y="56" width="377" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="GuD-EQ-UZ6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="jP3-A5-6bc">
+                                                        <rect key="frame" x="8" y="89" width="377" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="n4W-Xh-iPw"/>
+                                                        </constraints>
+                                                        <string key="text">The hotel provides complete amenities and friendly service. Guests appreciate the clean, spacious rooms and convenient location near the city center and public transport.</string>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UO-1r-NIt">
+                                                        <rect key="frame" x="8" y="158" width="103" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="KFy-tJ-XJc"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Read more">
+                                                            <fontDescription key="titleFontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                            <color key="baseForegroundColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="EaL-F6-qHQ"/>
+                                                    <constraint firstItem="f9b-x6-pxX" firstAttribute="top" secondItem="1ri-53-qiM" secondAttribute="top" constant="8" id="E34-lu-MXS"/>
+                                                    <constraint firstItem="KeE-Ye-mrz" firstAttribute="top" secondItem="f9b-x6-pxX" secondAttribute="bottom" constant="8" id="H7k-oU-3wv"/>
+                                                    <constraint firstItem="f9b-x6-pxX" firstAttribute="leading" secondItem="1ri-53-qiM" secondAttribute="leading" constant="8" id="K9z-6x-kOB"/>
+                                                    <constraint firstAttribute="height" constant="188" id="Vfy-fX-0ON"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KeE-Ye-mrz" secondAttribute="trailing" constant="8" id="YzM-LC-059"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jP3-A5-6bc" secondAttribute="trailing" constant="8" id="cCk-5q-W8u"/>
+                                                    <constraint firstItem="0UO-1r-NIt" firstAttribute="leading" secondItem="1ri-53-qiM" secondAttribute="leading" constant="8" id="eMh-3l-SGy"/>
+                                                    <constraint firstItem="jP3-A5-6bc" firstAttribute="leading" secondItem="1ri-53-qiM" secondAttribute="leading" constant="8" id="fRB-Km-t5K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f9b-x6-pxX" secondAttribute="trailing" constant="8" id="gnt-2S-DBM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0UO-1r-NIt" secondAttribute="bottom" id="ifc-Po-Zj0"/>
+                                                    <constraint firstItem="KeE-Ye-mrz" firstAttribute="leading" secondItem="1ri-53-qiM" secondAttribute="leading" constant="8" id="nur-Wd-2ly"/>
+                                                    <constraint firstItem="jP3-A5-6bc" firstAttribute="top" secondItem="KeE-Ye-mrz" secondAttribute="bottom" constant="8" id="ql6-iU-AC8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6r-u0-Vy0">
+                                                <rect key="frame" x="0.0" y="518" width="393" height="159"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended sightseeing time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-W3-oU6">
+                                                        <rect key="frame" x="8" y="8" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Tvn-Vh-OS6"/>
+                                                            <constraint firstAttribute="width" constant="165" id="WSP-kw-HPz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-40-Xec">
+                                                        <rect key="frame" x="8" y="61" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="gya-Ah-pbE"/>
+                                                            <constraint firstAttribute="width" constant="165" id="p35-QQ-iPs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="NWv-ya-dM3">
+                                                        <rect key="frame" x="8" y="114" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="165" id="9GK-mt-b1b"/>
+                                                            <constraint firstAttribute="height" constant="45" id="CaY-k5-viV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-2 hours" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="uwS-kd-s59">
+                                                        <rect key="frame" x="220" y="8" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="N0l-cR-VzY"/>
+                                                            <constraint firstAttribute="width" constant="165" id="mfh-Fi-V4H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenina street 20" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="viG-AP-d0x">
+                                                        <rect key="frame" x="220" y="61" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="165" id="CIw-Cn-i20"/>
+                                                            <constraint firstAttribute="height" constant="45" id="Qxy-vm-byp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+375-29-16-11-888" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-sF-Fnc">
+                                                        <rect key="frame" x="220" y="114" width="165" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="165" id="Sll-DN-LdT"/>
+                                                            <constraint firstAttribute="height" constant="45" id="eUV-82-4Ox"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="viG-AP-d0x" firstAttribute="top" secondItem="uwS-kd-s59" secondAttribute="bottom" constant="8" id="0D8-p5-r3b"/>
+                                                    <constraint firstItem="wAG-W3-oU6" firstAttribute="top" secondItem="E6r-u0-Vy0" secondAttribute="top" constant="8" id="0lq-gu-jb0"/>
+                                                    <constraint firstItem="NWv-ya-dM3" firstAttribute="leading" secondItem="E6r-u0-Vy0" secondAttribute="leading" constant="8" id="38U-gI-WlJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uwS-kd-s59" secondAttribute="trailing" constant="8" id="5N3-sj-uby"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Q3G-sF-Fnc" secondAttribute="trailing" constant="8" id="CEw-Rx-OBb"/>
+                                                    <constraint firstAttribute="height" constant="159" id="D3W-oR-SCU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="viG-AP-d0x" secondAttribute="trailing" constant="8" id="JD0-8W-z7p"/>
+                                                    <constraint firstItem="ERd-40-Xec" firstAttribute="leading" secondItem="E6r-u0-Vy0" secondAttribute="leading" constant="8" id="JoF-Md-bDi"/>
+                                                    <constraint firstItem="NWv-ya-dM3" firstAttribute="top" secondItem="ERd-40-Xec" secondAttribute="bottom" constant="8" symbolic="YES" id="LK8-Im-u10"/>
+                                                    <constraint firstItem="Q3G-sF-Fnc" firstAttribute="top" secondItem="viG-AP-d0x" secondAttribute="bottom" constant="8" symbolic="YES" id="TcJ-GE-ANa"/>
+                                                    <constraint firstItem="viG-AP-d0x" firstAttribute="top" secondItem="uwS-kd-s59" secondAttribute="bottom" constant="8" symbolic="YES" id="dg2-Z6-UTr"/>
+                                                    <constraint firstItem="Q3G-sF-Fnc" firstAttribute="top" secondItem="viG-AP-d0x" secondAttribute="bottom" constant="8" symbolic="YES" id="e8d-Yt-lwO"/>
+                                                    <constraint firstItem="wAG-W3-oU6" firstAttribute="leading" secondItem="E6r-u0-Vy0" secondAttribute="leading" constant="8" id="eh7-yb-Xq8"/>
+                                                    <constraint firstItem="ERd-40-Xec" firstAttribute="top" secondItem="wAG-W3-oU6" secondAttribute="bottom" constant="8" id="qdA-st-xdv"/>
+                                                    <constraint firstItem="uwS-kd-s59" firstAttribute="top" secondItem="E6r-u0-Vy0" secondAttribute="top" constant="8" id="rgq-pi-vS4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLV-JW-W7e">
+                                                <rect key="frame" x="0.0" y="677" width="393" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="H93-tV-XY8">
+                                                        <rect key="frame" x="8" y="8" width="377" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="VaA-sO-fXl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YGr-57-U6s">
+                                                        <rect key="frame" x="8" y="51" width="377" height="141"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hTd-Lu-2yz">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wRz-LB-bas" customClass="FacilityCollectionViewCell" customModule="ModulesApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="6.666666666666667" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CvL-g2-Tbs">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" catalog="system" id="3Zt-s3-5wH">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="80"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="80" id="fNi-Xl-kag"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbo-0h-jR2">
+                                                                            <rect key="frame" x="0.0" y="82" width="128" height="46"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="3Zt-s3-5wH" secondAttribute="trailing" id="PrP-c1-X6o"/>
+                                                                        <constraint firstItem="3Zt-s3-5wH" firstAttribute="top" secondItem="CvL-g2-Tbs" secondAttribute="top" id="Uko-iZ-EgI"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="pbo-0h-jR2" secondAttribute="bottom" id="ZHH-d8-Fir"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="pbo-0h-jR2" secondAttribute="trailing" id="j6J-f4-fAc"/>
+                                                                        <constraint firstItem="pbo-0h-jR2" firstAttribute="leading" secondItem="CvL-g2-Tbs" secondAttribute="leading" id="o0k-Wa-Dsk"/>
+                                                                        <constraint firstItem="pbo-0h-jR2" firstAttribute="top" secondItem="3Zt-s3-5wH" secondAttribute="bottom" id="qwg-7G-3W7"/>
+                                                                        <constraint firstItem="3Zt-s3-5wH" firstAttribute="leading" secondItem="CvL-g2-Tbs" secondAttribute="leading" id="zff-gS-I5w"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <size key="customSize" width="128" height="128"/>
+                                                                <connections>
+                                                                    <outlet property="image" destination="3Zt-s3-5wH" id="dvY-HR-OKd"/>
+                                                                    <outlet property="name" destination="pbo-0h-jR2" id="ywl-sH-scG"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="H93-tV-XY8" firstAttribute="leading" secondItem="hLV-JW-W7e" secondAttribute="leading" constant="8" id="ECi-Ni-8lh"/>
+                                                    <constraint firstItem="H93-tV-XY8" firstAttribute="top" secondItem="hLV-JW-W7e" secondAttribute="top" constant="8" id="FaQ-uy-vXT"/>
+                                                    <constraint firstItem="YGr-57-U6s" firstAttribute="leading" secondItem="hLV-JW-W7e" secondAttribute="leading" constant="8" id="JR4-Yk-s2Z"/>
+                                                    <constraint firstAttribute="height" constant="200" id="QJf-bB-wD8"/>
+                                                    <constraint firstItem="H93-tV-XY8" firstAttribute="top" secondItem="hLV-JW-W7e" secondAttribute="top" constant="8" id="UPx-Te-Vkr"/>
+                                                    <constraint firstItem="H93-tV-XY8" firstAttribute="leading" secondItem="hLV-JW-W7e" secondAttribute="leading" constant="8" id="XUe-Aa-dwH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H93-tV-XY8" secondAttribute="trailing" constant="8" id="Yue-FE-tri"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YGr-57-U6s" secondAttribute="bottom" constant="8" id="htN-UL-DJW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YGr-57-U6s" secondAttribute="trailing" constant="8" id="rA0-yC-QBp"/>
+                                                    <constraint firstItem="YGr-57-U6s" firstAttribute="top" secondItem="H93-tV-XY8" secondAttribute="bottom" constant="8" symbolic="YES" id="uof-r6-F9T"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAB-Ih-QJZ">
+                                                <rect key="frame" x="0.0" y="877" width="393" height="138"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate this place" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="RyZ-7f-ZKt">
+                                                        <rect key="frame" x="8" y="8" width="377" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="tMA-Fb-OAr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6h-H9-f8G">
+                                                        <rect key="frame" x="179" y="51" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="Yge-S3-daa"/>
+                                                            <constraint firstAttribute="width" secondItem="H6h-H9-f8G" secondAttribute="height" id="pMO-fi-GIe"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8di-D7-Vce">
+                                                        <rect key="frame" x="214" y="51" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="NYc-Ru-Mfr"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muR-Y8-KQw">
+                                                        <rect key="frame" x="249" y="51" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="697-s6-3at"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-kB-2pE">
+                                                        <rect key="frame" x="109" y="51" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="Mvc-TC-lpT"/>
+                                                            <constraint firstAttribute="width" secondItem="oNZ-kB-2pE" secondAttribute="height" id="lmJ-T6-LXK"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-Hb-8Mn">
+                                                        <rect key="frame" x="144" y="51" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="wMJ-kQ-Lgy"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-ch-8Hp">
+                                                        <rect key="frame" x="109" y="94" width="175" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="Dp8-pW-ohR"/>
+                                                            <constraint firstAttribute="width" constant="175" id="vUW-fE-P6X"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Rate"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="RyZ-7f-ZKt" firstAttribute="leading" secondItem="nAB-Ih-QJZ" secondAttribute="leading" constant="8" id="4v2-08-qAC"/>
+                                                    <constraint firstItem="RyZ-7f-ZKt" firstAttribute="top" secondItem="nAB-Ih-QJZ" secondAttribute="top" constant="8" id="5JX-t8-z7c"/>
+                                                    <constraint firstItem="oNZ-kB-2pE" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" symbolic="YES" id="B2J-BE-Dap"/>
+                                                    <constraint firstItem="RyZ-7f-ZKt" firstAttribute="top" secondItem="nAB-Ih-QJZ" secondAttribute="top" constant="8" id="BFp-Ag-XCm"/>
+                                                    <constraint firstItem="8di-D7-Vce" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" id="Bpu-vz-x51"/>
+                                                    <constraint firstItem="RyZ-7f-ZKt" firstAttribute="leading" secondItem="nAB-Ih-QJZ" secondAttribute="leading" constant="8" id="CyR-XZ-qYs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="RyZ-7f-ZKt" secondAttribute="trailing" constant="8" id="MnE-GW-yqC"/>
+                                                    <constraint firstItem="Y4e-Hb-8Mn" firstAttribute="leading" secondItem="oNZ-kB-2pE" secondAttribute="trailing" id="Pmc-CE-YeI"/>
+                                                    <constraint firstItem="Y4e-Hb-8Mn" firstAttribute="width" secondItem="Y4e-Hb-8Mn" secondAttribute="height" id="QLb-Yj-AQV"/>
+                                                    <constraint firstItem="muR-Y8-KQw" firstAttribute="leading" secondItem="8di-D7-Vce" secondAttribute="trailing" id="VjI-Q9-NQA"/>
+                                                    <constraint firstItem="muR-Y8-KQw" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" symbolic="YES" id="WvU-Y2-BWT"/>
+                                                    <constraint firstAttribute="height" constant="138" id="Z8j-Ba-yMG"/>
+                                                    <constraint firstItem="H6h-H9-f8G" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" id="bjK-Yb-tMb"/>
+                                                    <constraint firstItem="H6h-H9-f8G" firstAttribute="centerX" secondItem="nAB-Ih-QJZ" secondAttribute="centerX" id="m6b-TW-cSB"/>
+                                                    <constraint firstItem="Y4e-Hb-8Mn" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" symbolic="YES" id="n1w-Ok-IQ6"/>
+                                                    <constraint firstItem="8di-D7-Vce" firstAttribute="leading" secondItem="H6h-H9-f8G" secondAttribute="trailing" id="pVp-aI-ptJ"/>
+                                                    <constraint firstItem="PSz-ch-8Hp" firstAttribute="top" secondItem="H6h-H9-f8G" secondAttribute="bottom" constant="8" symbolic="YES" id="tPH-J9-Zkk"/>
+                                                    <constraint firstItem="PSz-ch-8Hp" firstAttribute="centerX" secondItem="nAB-Ih-QJZ" secondAttribute="centerX" id="ubd-pF-QJx"/>
+                                                    <constraint firstItem="H6h-H9-f8G" firstAttribute="leading" secondItem="Y4e-Hb-8Mn" secondAttribute="trailing" id="xfn-ua-g4G"/>
+                                                    <constraint firstItem="muR-Y8-KQw" firstAttribute="width" secondItem="muR-Y8-KQw" secondAttribute="height" id="yAB-rk-A3p"/>
+                                                    <constraint firstItem="8di-D7-Vce" firstAttribute="width" secondItem="8di-D7-Vce" secondAttribute="height" id="yld-yy-cmq"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -973,8 +1276,23 @@ Vacation</string>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="2Do-6w-uyC"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" style="editor" id="la6-hs-usc"/>
                     <connections>
+                        <outlet property="collectionView" destination="YGr-57-U6s" id="avA-30-Zyq"/>
+                        <outlet property="facilitiesView" destination="hLV-JW-W7e" id="7vJ-Ce-SZc"/>
                         <outlet property="favoriteButton" destination="iYU-HN-TuO" id="APf-go-2wR"/>
+                        <outlet property="fifthStar" destination="muR-Y8-KQw" id="ixZ-Ub-WWg"/>
+                        <outlet property="firstStar" destination="oNZ-kB-2pE" id="RNG-E9-sCA"/>
+                        <outlet property="floatLabel" destination="wAG-W3-oU6" id="3Fh-xv-nUF"/>
+                        <outlet property="floatLabelValue" destination="uwS-kd-s59" id="AaA-Qg-Or0"/>
+                        <outlet property="fourthStar" destination="8di-D7-Vce" id="sOP-z2-ilc"/>
                         <outlet property="image" destination="rI9-8w-g1I" id="B53-8F-c3b"/>
+                        <outlet property="infoView" destination="E6r-u0-Vy0" id="tM5-th-fCQ"/>
+                        <outlet property="placeDescription" destination="jP3-A5-6bc" id="Il0-4o-Ajp"/>
+                        <outlet property="placeName" destination="f9b-x6-pxX" id="ZQG-kF-jdA"/>
+                        <outlet property="placeRating" destination="KeE-Ye-mrz" id="8Fu-CO-ZZK"/>
+                        <outlet property="rateButton" destination="PSz-ch-8Hp" id="NED-li-2lC"/>
+                        <outlet property="readMoreButton" destination="0UO-1r-NIt" id="h8g-xK-UIL"/>
+                        <outlet property="secondStar" destination="Y4e-Hb-8Mn" id="SNc-LO-Fom"/>
+                        <outlet property="thirdStar" destination="H6h-H9-f8G" id="7fy-KP-pCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUu-PX-pPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -991,6 +1309,8 @@ Vacation</string>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="wifi" catalog="system" width="128" height="90"/>
         <image name="вокзал" width="2560" height="1828"/>
         <image name="минск" width="1500" height="1200"/>
         <image name="музей искусства" width="1360" height="907"/>
