@@ -137,17 +137,35 @@ Vacation</string>
             </objects>
             <point key="canvasLocation" x="1111" y="818"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="JYy-AN-fG9">
             <objects>
-                <viewController id="olk-aS-j2o" sceneMemberID="viewController">
+                <viewController id="olk-aS-j2o" customClass="ProfileViewController" customModule="ModulesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8R-MG-dx0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jv-3b-1wW">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="aKU-Jq-Mce"/>
+                                    <constraint firstAttribute="height" constant="100" id="s95-qF-uAS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oGo-hP-ATc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Jv-3b-1wW" firstAttribute="centerX" secondItem="Q8R-MG-dx0" secondAttribute="centerX" id="AbG-os-Q8f"/>
+                            <constraint firstItem="5Jv-3b-1wW" firstAttribute="centerY" secondItem="Q8R-MG-dx0" secondAttribute="centerY" id="Vfw-5Z-w7i"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="dH7-sH-W0B"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="5Jv-3b-1wW" id="8qx-1E-TWk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8d2-BV-uLK" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +222,7 @@ Vacation</string>
                                                         <constraint firstAttribute="height" constant="50" id="Ih1-Yu-F2t"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-Hj-IVH">
                                                     <rect key="frame" x="0.0" y="85" width="287" height="35"/>
@@ -230,7 +248,7 @@ Vacation</string>
                                                         <constraint firstAttribute="height" constant="50" id="gyE-Pp-N1D"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be 6 characters or more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0W-JW-3Wr">
                                                     <rect key="frame" x="0.0" y="205" width="287" height="35"/>
@@ -250,6 +268,9 @@ Vacation</string>
                                                     <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                                         <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <segue destination="UEc-AO-0eE" kind="presentation" identifier="forgotPassword" modalPresentationStyle="fullScreen" id="bHU-8e-Hr3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -333,6 +354,7 @@ Vacation</string>
                     <connections>
                         <outlet property="authButton" destination="4bn-HR-44N" id="SGP-pN-6jR"/>
                         <outlet property="changeAuth" destination="o4H-ga-woh" id="wNz-I9-coT"/>
+                        <outlet property="dontHaveAccount" destination="Jk4-H5-wj7" id="xd6-5f-LG6"/>
                         <outlet property="emailTextField" destination="F7O-7g-hOv" id="QEH-41-X0u"/>
                         <outlet property="forgotPasswordButton" destination="AMC-Oa-IhC" id="fRg-pf-ak6"/>
                         <outlet property="incorrectEmailLabel" destination="X2I-Hj-IVH" id="XTd-oa-55l"/>
@@ -343,7 +365,117 @@ Vacation</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmi-jY-ZOP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="818"/>
+            <point key="canvasLocation" x="381" y="818"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="cNP-1t-pWf">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordViewController" id="UEc-AO-0eE" customClass="ForgotPasswordViewController" customModule="ModulesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qDo-QV-1Dp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="минск" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-iT-7L0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M13-Q3-HQW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FaU-Bk-cqi">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mle-ul-Ehv">
+                                            <rect key="frame" x="53" y="366" width="287" height="120"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGd-58-nFu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="i4K-kB-VC2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="26"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Tx-8d-yNW">
+                                                    <rect key="frame" x="0.0" y="35" width="287" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="qxh-MD-K3E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR1-wM-MKg">
+                                                    <rect key="frame" x="0.0" y="85" width="287" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="JR7-RN-s83"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-e8-beK">
+                                            <rect key="frame" x="53" y="531" width="287" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="LYW-Rx-iRL"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Send mail" cornerStyle="large">
+                                                <fontDescription key="titleFontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="20"/>
+                                                <color key="baseBackgroundColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="mle-ul-Ehv" secondAttribute="trailing" constant="53" id="1ue-60-qE0"/>
+                                        <constraint firstItem="VHe-e8-beK" firstAttribute="top" secondItem="mle-ul-Ehv" secondAttribute="bottom" constant="45" id="4Bh-hH-4CT"/>
+                                        <constraint firstItem="VHe-e8-beK" firstAttribute="leading" secondItem="FaU-Bk-cqi" secondAttribute="leading" constant="53" id="FWM-Ng-qwg"/>
+                                        <constraint firstItem="mle-ul-Ehv" firstAttribute="centerX" secondItem="FaU-Bk-cqi" secondAttribute="centerX" id="IaF-s0-ubp"/>
+                                        <constraint firstItem="mle-ul-Ehv" firstAttribute="centerY" secondItem="FaU-Bk-cqi" secondAttribute="centerY" id="Ucn-Mg-RDD"/>
+                                        <constraint firstAttribute="trailing" secondItem="VHe-e8-beK" secondAttribute="trailing" constant="53" id="Vr7-uu-vrZ"/>
+                                        <constraint firstItem="mle-ul-Ehv" firstAttribute="leading" secondItem="FaU-Bk-cqi" secondAttribute="leading" constant="53" id="x3W-Lc-Fk9"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M I N S K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hba-Ig-Gch">
+                                <rect key="frame" x="53" y="59" width="287" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="1bm-un-o6G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="71"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wW9-c2-Nyh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bMb-iT-7L0" firstAttribute="top" secondItem="qDo-QV-1Dp" secondAttribute="top" id="57A-5l-DXW"/>
+                            <constraint firstItem="bMb-iT-7L0" firstAttribute="trailing" secondItem="wW9-c2-Nyh" secondAttribute="trailing" id="88c-sy-JhO"/>
+                            <constraint firstItem="M13-Q3-HQW" firstAttribute="top" secondItem="qDo-QV-1Dp" secondAttribute="top" id="M9Q-FK-d9p"/>
+                            <constraint firstItem="hba-Ig-Gch" firstAttribute="leading" secondItem="wW9-c2-Nyh" secondAttribute="leading" constant="53" id="MNt-8h-g5d"/>
+                            <constraint firstItem="hba-Ig-Gch" firstAttribute="top" secondItem="wW9-c2-Nyh" secondAttribute="top" id="Mtg-nU-KJ5"/>
+                            <constraint firstItem="M13-Q3-HQW" firstAttribute="leading" secondItem="wW9-c2-Nyh" secondAttribute="leading" id="ZuC-PS-IzE"/>
+                            <constraint firstItem="wW9-c2-Nyh" firstAttribute="trailing" secondItem="hba-Ig-Gch" secondAttribute="trailing" constant="53" id="jYZ-zL-Zz6"/>
+                            <constraint firstItem="hba-Ig-Gch" firstAttribute="centerX" secondItem="qDo-QV-1Dp" secondAttribute="centerX" id="oX1-gi-RA1"/>
+                            <constraint firstItem="M13-Q3-HQW" firstAttribute="trailing" secondItem="wW9-c2-Nyh" secondAttribute="trailing" id="qOE-aZ-PY4"/>
+                            <constraint firstAttribute="bottom" secondItem="bMb-iT-7L0" secondAttribute="bottom" id="tQL-5s-Dqi"/>
+                            <constraint firstAttribute="bottom" secondItem="M13-Q3-HQW" secondAttribute="bottom" id="zgK-6b-2O3"/>
+                            <constraint firstItem="bMb-iT-7L0" firstAttribute="leading" secondItem="wW9-c2-Nyh" secondAttribute="leading" id="znC-ZU-TYs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="0Tx-8d-yNW" id="jRH-DR-onZ"/>
+                        <outlet property="incorrectEmailLabel" destination="wR1-wM-MKg" id="ayv-Us-hIc"/>
+                        <outlet property="sendEmail" destination="VHe-e8-beK" id="ik7-ws-Atm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLc-jk-0gu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="1467"/>
         </scene>
     </scenes>
     <resources>

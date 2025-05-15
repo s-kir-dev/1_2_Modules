@@ -18,10 +18,13 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var authButton: UIButton!
     @IBOutlet weak var changeAuth: UIButton!
+    @IBOutlet weak var dontHaveAccount: UILabel!
     
     var signUp: Bool = false {
         didSet {
             authButton.setTitle(signUp ? "Sign Up" : "Login" , for: .normal)
+            changeAuth.isHidden = true
+            dontHaveAccount.isHidden = true
             incorrectEmailLabel.isHidden = true
             incorrectPasswordLabel.isHidden = true
         }
@@ -83,7 +86,7 @@ class AuthViewController: UIViewController {
     }
     
     @objc func forgotPasswordTapped() {
-        showAlert(title: "Извините!", message: "Ничем не могу помочь, я его тоже не помню.")
+        performSegue(withIdentifier: "forgotPassword", sender: self)
     }
     
     @objc func changeAuthTapped() {
@@ -106,6 +109,13 @@ class AuthViewController: UIViewController {
         let alertAction = UIAlertAction(title: "Oк", style: .default)
         alertController.addAction(alertAction)
         present(alertController, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "forgotPassword" {
+            guard let destination = segue.destination as? ForgotPasswordViewController else { return }
+            destination.email = emailTextField.text!
+        }
     }
 }
 
