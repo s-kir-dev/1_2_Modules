@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if let user = user {
                 tabBar.selectedIndex = 0
                 window.rootViewController = tabBar
+                downloadFavorites()
             } else {
                 window.rootViewController = startVC
             }
