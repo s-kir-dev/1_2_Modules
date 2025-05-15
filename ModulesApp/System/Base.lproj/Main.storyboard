@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startVC" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,7 @@ Vacation</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nkm-Ya-uki" secondAttribute="trailing" constant="53" id="n53-K2-PtG"/>
                             <constraint firstItem="phA-oG-M9W" firstAttribute="top" secondItem="L89-JF-isR" secondAttribute="bottom" constant="175" id="qmr-Ik-jS5"/>
                             <constraint firstItem="SMx-t9-SJ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="syl-Rm-EHD"/>
+                            <constraint firstItem="nkm-Ya-uki" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCk-qm-gHz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -119,7 +120,7 @@ Vacation</string>
         <!--Tab Bar Controller-->
         <scene sceneID="ack-Hy-7zq">
             <objects>
-                <tabBarController id="iSf-lE-DEi" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="iSf-lE-DEi" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vdJ-Cd-f6s">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,7 +204,7 @@ Vacation</string>
                                                         <constraint firstAttribute="height" constant="50" id="Ih1-Yu-F2t"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-Hj-IVH">
                                                     <rect key="frame" x="0.0" y="85" width="287" height="35"/>
@@ -229,7 +230,7 @@ Vacation</string>
                                                         <constraint firstAttribute="height" constant="50" id="gyE-Pp-N1D"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be 6 characters or more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0W-JW-3Wr">
                                                     <rect key="frame" x="0.0" y="205" width="287" height="35"/>
@@ -326,9 +327,17 @@ Vacation</string>
                             <constraint firstItem="SNq-Zk-uDB" firstAttribute="leading" secondItem="O30-sF-OgM" secondAttribute="leading" constant="53" id="uVX-eU-JLu"/>
                             <constraint firstItem="EQg-uL-LBH" firstAttribute="leading" secondItem="O30-sF-OgM" secondAttribute="leading" id="utL-S9-npa"/>
                             <constraint firstAttribute="bottom" secondItem="EQg-uL-LBH" secondAttribute="bottom" id="uvG-TV-yP9"/>
+                            <constraint firstItem="SNq-Zk-uDB" firstAttribute="centerX" secondItem="Iw3-Wk-vvo" secondAttribute="centerX" id="yZY-gn-K1s"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authButton" destination="4bn-HR-44N" id="SGP-pN-6jR"/>
+                        <outlet property="changeAuth" destination="o4H-ga-woh" id="wNz-I9-coT"/>
+                        <outlet property="emailTextField" destination="F7O-7g-hOv" id="QEH-41-X0u"/>
+                        <outlet property="forgotPasswordButton" destination="AMC-Oa-IhC" id="fRg-pf-ak6"/>
+                        <outlet property="incorrectEmailLabel" destination="X2I-Hj-IVH" id="XTd-oa-55l"/>
+                        <outlet property="incorrectPasswordLabel" destination="V0W-JW-3Wr" id="0Ce-HU-0Zn"/>
+                        <outlet property="passwordTextField" destination="gg5-b0-RBa" id="sb2-yq-QXs"/>
                         <segue destination="iSf-lE-DEi" kind="presentation" modalPresentationStyle="fullScreen" id="tBm-vL-XLn"/>
                     </connections>
                 </viewController>
