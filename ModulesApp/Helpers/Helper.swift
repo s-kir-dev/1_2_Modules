@@ -181,15 +181,23 @@ func countRating(place: Place, showReviews: Bool, completion: @escaping((String)
 }
 
 
-var rewards: [String] = ["maven", "routeMaster", "wanderList", "traiblazer"]
+var rewards: [String] = [] {
+    didSet {
+        uploadRewards()
+    }
+}
 
 
 func uploadRewards() {
-    UserDefaults.standard.set(rewards, forKey: "rewards")
+    if let user = Auth.auth().currentUser {
+        UserDefaults.standard.set(rewards, forKey: "rewards-\(user.uid)")
+    }
 }
 
 func downloadRewards() {
-    if let downloadedRewards = UserDefaults.standard.array(forKey: "rewards") as? [String] {
-        rewards = downloadedRewards
+    if let user = Auth.auth().currentUser {
+        if let downloadedRewards = UserDefaults.standard.array(forKey: "rewards-\(user.uid)") as? [String] {
+            rewards = downloadedRewards
+        }
     }
 }

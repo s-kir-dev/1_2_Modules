@@ -40,6 +40,8 @@ class ProfileViewController: UIViewController {
         
         profileImage.image = loadImage()
         
+        collectionView.reloadData()
+        
         guard let user = Auth.auth().currentUser else { return }
         db.child("users").child(user.uid).observeSingleEvent(of: .value, with: { snaphot in
             

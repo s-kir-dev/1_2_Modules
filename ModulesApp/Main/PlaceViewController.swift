@@ -72,6 +72,11 @@ class PlaceViewController: UIViewController {
                 }
                 visitors -= 1
             } else {
+                if !rewards.contains("traiblazer") {
+                    rewards.append("traiblazer")
+                    self.showAlert(title: "Horray!", message: "You have achieved a new reward: Traiblazer!")
+                }
+                
                 self.beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
                 beenPlaces.append(self.place)
                 visitors += 1
@@ -111,6 +116,12 @@ class PlaceViewController: UIViewController {
         } else {
             favorites.append(place)
             favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        
+        if favorites.count > 4 && !rewards.contains( "wanderList") {
+            rewards.append("wanderList")
+            
+            showAlert(title: "Horray!", message: "You have achieved a new reward: Wander List!")
         }
     }
     
@@ -178,6 +189,12 @@ class PlaceViewController: UIViewController {
         }
         
         placeRating.text = place.description
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Oк", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 
 }

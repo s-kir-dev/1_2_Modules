@@ -79,10 +79,21 @@ extension AllViewController: UICollectionViewDataSource {
             cell.favoriteAction = {
                 favorites.append(place)
                 collectionView.reloadData()
+                if favorites.count > 4 && !rewards.contains( "wanderList") {
+                    rewards.append("wanderList")
+                    
+                    self.showAlert(title: "Horray!", message: "You have achieved a new reward: Wander List!")
+                }
             }
         }
         
         return cell
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
     }
 }
 
