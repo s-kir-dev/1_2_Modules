@@ -47,7 +47,7 @@ class ForgotPasswordViewController: UIViewController {
 
     func validateEmail() -> Bool {
        guard let email = emailTextField.text else { return false }
-        let emailRegex = "^[A-Za-z0-9._%+-]+@[a-z0-9]+\\.[a-z]{2,}$"
+        let emailRegex = "^[A-Za-z0-9.]+\\@[a-z]+\\.[a-z]{2,}$"
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
 

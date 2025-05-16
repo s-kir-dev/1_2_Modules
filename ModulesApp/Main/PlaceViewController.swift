@@ -27,6 +27,7 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var fourthStar: UIButton!
     @IBOutlet weak var fifthStar: UIButton!
     @IBOutlet weak var rateButton: UIButton!
+    @IBOutlet weak var beenButton: UIButton!
     
     var stars: [UIButton] = []
     
@@ -49,6 +50,52 @@ class PlaceViewController: UIViewController {
         rateButton.addTarget(self, action: #selector(rateButtonTapped), for: .touchUpInside)
         
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
+        
+        beenButton.addTarget(self, action: #selector(beenButtonTapped), for: .touchUpInside)
+        
+        readMoreButton.addTarget(self, action: #selector(readMoreButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func beenButtonTapped() {
+        db.child("places").child(place.name).observeSingleEvent(of: .value, with: { snapshot in
+            var visitors = 0
+            
+            if let value = snapshot.value as? [String: Any],
+               let visitorsCount = value["visitors"] as? Int {
+                visitors = visitorsCount
+            }
+            
+            if beenPlaces.contains(self.place) {
+                self.beenButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+                if let index = beenPlaces.firstIndex(of: self.place) {
+                    beenPlaces.remove(at: index)
+                }
+                visitors -= 1
+            } else {
+                self.beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+                beenPlaces.append(self.place)
+                visitors += 1
+            }
+
+            db.child("places").child(self.place.name).updateChildValues([
+                "visitors": visitors
+            ])
+
+            uploadBeenPlaces()
+            print(beenPlaces.count)
+        })
+    }
+    
+    @objc func readMoreButtonTapped() {
+        let url = URL(string: "https://www.google.com/search?q=\(place.name)")
+        if UIApplication.shared.canOpenURL(url!) {
+            UIApplication.shared.open(url!)
+        } else {
+            let alert = UIAlertController(title: "Ошибка", message: "Не могу открыть ссылку", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Oк", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        }
     }
     
     @objc func starTapped(_ sender: UIButton) {
@@ -123,6 +170,12 @@ class PlaceViewController: UIViewController {
             self.placeRating.text = "\(rating)"
         })
         setMyRate()
+        
+        if beenPlaces.contains(place) {
+            beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        } else {
+            beenButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+        }
         
         placeRating.text = place.description
     }

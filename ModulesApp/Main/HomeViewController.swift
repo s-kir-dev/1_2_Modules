@@ -56,6 +56,9 @@ class HomeViewController: UIViewController {
         default:
             sortedPlaces = Places.locations
         }
+        
+        collectionView.setContentOffset(.zero, animated: true)
+        
         collectionView.reloadData()
     }
     

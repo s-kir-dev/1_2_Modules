@@ -921,6 +921,7 @@ Vacation</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYU-HN-TuO">
                                                         <rect key="frame" x="342" y="295" width="35" height="35"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" secondItem="iYU-HN-TuO" secondAttribute="height" id="YQw-rc-6pW"/>
                                                             <constraint firstAttribute="width" secondItem="iYU-HN-TuO" secondAttribute="height" id="g0G-Zj-twR"/>
                                                             <constraint firstAttribute="height" constant="35" id="zRn-W7-srd"/>
                                                         </constraints>
@@ -930,14 +931,27 @@ Vacation</string>
                                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCc-fU-wrT">
+                                                        <rect key="frame" x="16" y="295" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="SCc-fU-wrT" secondAttribute="height" multiplier="1:1" id="CTb-q2-0nq"/>
+                                                            <constraint firstAttribute="height" constant="35" id="oOh-Ue-IRV"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.seal" catalog="system" cornerStyle="capsule">
+                                                            <color key="baseForegroundColor" systemColor="tintColor"/>
+                                                            <color key="baseBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="iYU-HN-TuO" secondAttribute="bottom" id="4Ni-ef-dBU"/>
+                                                    <constraint firstItem="SCc-fU-wrT" firstAttribute="leading" secondItem="HgV-LM-psT" secondAttribute="leading" constant="16" id="AZQ-2W-akT"/>
                                                     <constraint firstAttribute="bottom" secondItem="rI9-8w-g1I" secondAttribute="bottom" constant="8" id="OeM-bR-gwc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SCc-fU-wrT" secondAttribute="bottom" id="PEc-6s-dc3"/>
                                                     <constraint firstAttribute="trailing" secondItem="rI9-8w-g1I" secondAttribute="trailing" constant="8" id="PMZ-TC-Fcm"/>
                                                     <constraint firstItem="rI9-8w-g1I" firstAttribute="top" secondItem="HgV-LM-psT" secondAttribute="top" constant="8" id="SaP-nu-H4Z"/>
-                                                    <constraint firstItem="iYU-HN-TuO" firstAttribute="width" secondItem="iYU-HN-TuO" secondAttribute="height" id="YQw-rc-6pW"/>
                                                     <constraint firstAttribute="height" constant="330" id="ZjY-eL-xOb"/>
                                                     <constraint firstAttribute="trailing" secondItem="iYU-HN-TuO" secondAttribute="trailing" constant="16" id="dwf-ZK-Qrl"/>
                                                     <constraint firstItem="rI9-8w-g1I" firstAttribute="leading" secondItem="HgV-LM-psT" secondAttribute="leading" constant="8" id="tWo-tX-10n"/>
@@ -1186,6 +1200,7 @@ Vacation</string>
                                                         <rect key="frame" x="214" y="51" width="35" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="NYc-Ru-Mfr"/>
+                                                            <constraint firstAttribute="width" secondItem="8di-D7-Vce" secondAttribute="height" id="yld-yy-cmq"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
@@ -1194,6 +1209,7 @@ Vacation</string>
                                                         <rect key="frame" x="249" y="51" width="35" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="697-s6-3at"/>
+                                                            <constraint firstAttribute="width" secondItem="muR-Y8-KQw" secondAttribute="height" id="yAB-rk-A3p"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
@@ -1210,6 +1226,7 @@ Vacation</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-Hb-8Mn">
                                                         <rect key="frame" x="144" y="51" width="35" height="35"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Y4e-Hb-8Mn" secondAttribute="height" id="QLb-Yj-AQV"/>
                                                             <constraint firstAttribute="width" constant="35" id="wMJ-kQ-Lgy"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
@@ -1235,7 +1252,6 @@ Vacation</string>
                                                     <constraint firstItem="RyZ-7f-ZKt" firstAttribute="leading" secondItem="nAB-Ih-QJZ" secondAttribute="leading" constant="8" id="CyR-XZ-qYs"/>
                                                     <constraint firstAttribute="trailing" secondItem="RyZ-7f-ZKt" secondAttribute="trailing" constant="8" id="MnE-GW-yqC"/>
                                                     <constraint firstItem="Y4e-Hb-8Mn" firstAttribute="leading" secondItem="oNZ-kB-2pE" secondAttribute="trailing" id="Pmc-CE-YeI"/>
-                                                    <constraint firstItem="Y4e-Hb-8Mn" firstAttribute="width" secondItem="Y4e-Hb-8Mn" secondAttribute="height" id="QLb-Yj-AQV"/>
                                                     <constraint firstItem="muR-Y8-KQw" firstAttribute="leading" secondItem="8di-D7-Vce" secondAttribute="trailing" id="VjI-Q9-NQA"/>
                                                     <constraint firstItem="muR-Y8-KQw" firstAttribute="top" secondItem="RyZ-7f-ZKt" secondAttribute="bottom" constant="8" symbolic="YES" id="WvU-Y2-BWT"/>
                                                     <constraint firstAttribute="height" constant="138" id="Z8j-Ba-yMG"/>
@@ -1246,8 +1262,6 @@ Vacation</string>
                                                     <constraint firstItem="PSz-ch-8Hp" firstAttribute="top" secondItem="H6h-H9-f8G" secondAttribute="bottom" constant="8" symbolic="YES" id="tPH-J9-Zkk"/>
                                                     <constraint firstItem="PSz-ch-8Hp" firstAttribute="centerX" secondItem="nAB-Ih-QJZ" secondAttribute="centerX" id="ubd-pF-QJx"/>
                                                     <constraint firstItem="H6h-H9-f8G" firstAttribute="leading" secondItem="Y4e-Hb-8Mn" secondAttribute="trailing" id="xfn-ua-g4G"/>
-                                                    <constraint firstItem="muR-Y8-KQw" firstAttribute="width" secondItem="muR-Y8-KQw" secondAttribute="height" id="yAB-rk-A3p"/>
-                                                    <constraint firstItem="8di-D7-Vce" firstAttribute="width" secondItem="8di-D7-Vce" secondAttribute="height" id="yld-yy-cmq"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1276,6 +1290,7 @@ Vacation</string>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="2Do-6w-uyC"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" style="editor" id="la6-hs-usc"/>
                     <connections>
+                        <outlet property="beenButton" destination="SCc-fU-wrT" id="Btd-MV-GxV"/>
                         <outlet property="collectionView" destination="YGr-57-U6s" id="avA-30-Zyq"/>
                         <outlet property="facilitiesView" destination="hLV-JW-W7e" id="7vJ-Ce-SZc"/>
                         <outlet property="favoriteButton" destination="iYU-HN-TuO" id="APf-go-2wR"/>
@@ -1305,6 +1320,7 @@ Vacation</string>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow" width="24" height="24"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -1319,10 +1335,13 @@ Vacation</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
