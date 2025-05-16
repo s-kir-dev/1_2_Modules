@@ -77,9 +77,16 @@ class PlaceViewController: UIViewController {
                     self.showAlert(title: "Horray!", message: "You have achieved a new reward: Traiblazer!")
                 }
                 
-                self.beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
                 beenPlaces.append(self.place)
                 visitors += 1
+                
+                let summa = Places.adventure.count + Places.locations.count + Places.food.count + Places.hotels.count
+                if beenPlaces.count == summa && !rewards.contains("maven") {
+                    rewards.append("maven")
+                    self.showAlert(title: "Horray!", message: "You have achieved a new reward: Minsk Maven! You are really cool person!")
+                }
+                
+                self.beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
             }
 
             db.child("places").child(self.place.name).updateChildValues([
