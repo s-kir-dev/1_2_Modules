@@ -19,11 +19,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
+                
                 tabBar.selectedIndex = 0
                 window.rootViewController = tabBar
                 downloadFavorites()
                 downloadBeenPlaces()
+                downloadRewards()
+                
             } else {
+                
+                favorites = []
+                beenPlaces = []
+                rewards = []
+                
                 window.rootViewController = startVC
             }
         }

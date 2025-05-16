@@ -179,3 +179,17 @@ func countRating(place: Place, showReviews: Bool, completion: @escaping((String)
         }
     })
 }
+
+
+var rewards: [String] = ["maven", "routeMaster", "wanderList", "traiblazer"]
+
+
+func uploadRewards() {
+    UserDefaults.standard.set(rewards, forKey: "rewards")
+}
+
+func downloadRewards() {
+    if let downloadedRewards = UserDefaults.standard.array(forKey: "rewards") as? [String] {
+        rewards = downloadedRewards
+    }
+}

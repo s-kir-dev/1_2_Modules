@@ -57,8 +57,9 @@ class AuthViewController: UIViewController {
                             "password": password,
                             "name": "name"
                         ])
-                        //загружать фавориты
-                        //загружать награды
+                        downloadRewards()
+                        downloadFavorites()
+                        downloadBeenPlaces()
                     }
                 }
             } else {
@@ -66,8 +67,9 @@ class AuthViewController: UIViewController {
                     if let _ = error {
                         self.showAlert(title: "Ошибка!", message: "Такого аккаунта еще не существует.")
                     } else if let _ = result {
-                        //загружать фавориты
-                        //загружать награды
+                        downloadRewards()
+                        downloadFavorites()
+                        downloadBeenPlaces()
                     }
                 }
             }
