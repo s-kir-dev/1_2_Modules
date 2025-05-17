@@ -59,8 +59,10 @@ extension FavoritesViewController: UITableViewDataSource {
         let place = favorites[indexPath.row]
         
         cell.placeImage.image = UIImage(named: place.image)
-        cell.nameLabel.text = place.name
-        cell.typeLabel.text = place.placeType.rawValue
+        cell.nameLabel.text = place.name.localize()
+        cell.typeLabel.text = place.placeType.rawValue.localize()
+        
+        cell.selectionStyle = .none
         
         return cell
     }

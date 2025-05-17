@@ -74,7 +74,7 @@ class PlaceViewController: UIViewController {
             } else {
                 if !rewards.contains("traiblazer") {
                     rewards.append("traiblazer")
-                    self.showAlert(title: "Horray!", message: "You have achieved a new reward: Traiblazer!")
+                    self.showAlert(title: "Horray!".localize(), message: "You have achieved a new reward: Traiblazer!".localize())
                 }
                 
                 beenPlaces.append(self.place)
@@ -83,7 +83,7 @@ class PlaceViewController: UIViewController {
                 let summa = Places.adventure.count + Places.locations.count + Places.food.count + Places.hotels.count
                 if beenPlaces.count == summa && !rewards.contains("maven") {
                     rewards.append("maven")
-                    self.showAlert(title: "Horray!", message: "You have achieved a new reward: Minsk Maven! You are really cool person!")
+                    self.showAlert(title: "Horray!".localize(), message: "You have achieved a new reward: Minsk Maven! You are really cool person!".localize())
                 }
                 
                 self.beenButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
@@ -128,7 +128,7 @@ class PlaceViewController: UIViewController {
         if favorites.count > 4 && !rewards.contains( "wanderList") {
             rewards.append("wanderList")
             
-            showAlert(title: "Horray!", message: "You have achieved a new reward: Wander List!")
+            showAlert(title: "Horray!".localize(), message: "You have achieved a new reward: Wander List!".localize())
         }
     }
     
@@ -195,7 +195,7 @@ class PlaceViewController: UIViewController {
             beenButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
         }
         
-        placeRating.text = place.description
+        placeRating.text = place.description.localize()
     }
     
     func showAlert(title: String, message: String) {

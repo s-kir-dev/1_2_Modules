@@ -59,6 +59,23 @@ struct Place: Codable, Equatable {
     static func == (lhs: Place, rhs: Place) -> Bool {
         return lhs.name == rhs.name
     }
+    
+    init(name: String, image: String, description: String, placeType: PlaceType, recommendedTime: String, address: String, phone: String, facilities: [Facilities], budget: Int, openTime: String, rating: Double, myRate: Int, userID: String, documentID: String) {
+        self.name = name.localize()
+        self.image = image
+        self.description = description.localize()
+        self.placeType = placeType
+        self.recommendedTime = recommendedTime.localize()
+        self.address = address.localize()
+        self.phone = phone
+        self.facilities = facilities
+        self.budget = budget
+        self.openTime = openTime
+        self.rating = rating
+        self.myRate = myRate
+        self.userID = userID
+        self.documentID = documentID
+    }
 }
 
 
@@ -102,6 +119,13 @@ struct Recommended {
     let image: String
     let imageType: String
     let type: String
+    
+    init(name: String, image: String, imageType: String, type: String) {
+        self.name = name.localize()
+        self.image = image
+        self.imageType = imageType
+        self.type = type.localize()
+    }
 }
 
 var favorites: [Place] = []
