@@ -184,6 +184,8 @@ class PlaceViewController: UIViewController {
         }
         
         placeName.text = place.name
+        placeDescription.text = place.description
+        
         countRating(place: place, showReviews: true, completion: { rating in
             self.placeRating.text = "\(rating)"
         })
@@ -194,8 +196,6 @@ class PlaceViewController: UIViewController {
         } else {
             beenButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
         }
-        
-        placeRating.text = place.description.localize()
     }
     
     func showAlert(title: String, message: String) {
