@@ -35,6 +35,39 @@ class SettingsViewController: UIViewController {
         boxView3.layer.borderColor = UIColor.systemGray.cgColor
         
         setupMenu()
+        
+        lightSwitch.addTarget(self, action: #selector(lightSwitchValueChanged), for: .valueChanged)
+        darkSwitch.addTarget(self, action: #selector(darkSwitchValueChanged), for: .valueChanged)
+        systemSwitch.addTarget(self, action: #selector(systemSwitchValueChanged), for: .valueChanged)
+        
+        if let savedTheme = UserDefaults.standard.value(forKey: "AppTheme") as? Int {
+            changeTheme(UIUserInterfaceStyle(rawValue: savedTheme) ?? .unspecified)
+        }
+    }
+    
+    @objc func lightSwitchValueChanged() {
+        changeTheme(.light)
+    }
+    
+    @objc func darkSwitchValueChanged() {
+        changeTheme(.dark)
+    }
+    
+    @objc func systemSwitchValueChanged() {
+        changeTheme(.unspecified)
+    }
+    
+    func changeTheme(_ theme: UIUserInterfaceStyle) {
+        UIApplication.shared.windows.forEach { window in
+            window.overrideUserInterfaceStyle = theme
+        }
+        
+        
+        lightSwitch.setOn(theme == .light, animated: true)
+        darkSwitch.setOn(theme == .dark, animated: true)
+        systemSwitch.setOn(theme == .unspecified, animated: true)
+        
+        UserDefaults.standard.set(theme.rawValue, forKey: "AppTheme")
     }
     
     func setupMenu() {

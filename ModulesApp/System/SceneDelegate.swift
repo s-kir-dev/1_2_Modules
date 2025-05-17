@@ -17,6 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
+        let savedTheme = UIUserInterfaceStyle(rawValue: UserDefaults.standard.integer(forKey: "AppTheme")) ?? .unspecified
+        
+        window.overrideUserInterfaceStyle = savedTheme
+        
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
                 
