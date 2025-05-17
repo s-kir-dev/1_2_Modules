@@ -1,0 +1,294 @@
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "0Tx-8d-yNW"; */
+"0Tx-8d-yNW.placeholder" = "example@gmail.com";
+
+/* Class = "UIButton"; configuration.title = "Read more"; ObjectID = "0UO-1r-NIt"; */
+"0UO-1r-NIt.configuration.title" = "Read more";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0UO-1r-NIt"; */
+"0UO-1r-NIt.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Recommended"; ObjectID = "2MV-5m-BQo"; */
+"2MV-5m-BQo.text" = "Recommended";
+
+/* Class = "UILabel"; text = "Komarovsky market"; ObjectID = "47O-3D-zj5"; */
+"47O-3D-zj5.text" = "Komarovsky market";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4B6-OB-OeN"; */
+"4B6-OB-OeN.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "4bn-HR-44N"; */
+"4bn-HR-44N.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4bn-HR-44N"; */
+"4bn-HR-44N.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Tap the Heart  button  to add it to your favorites"; ObjectID = "5tA-ri-h7L"; */
+"5tA-ri-h7L.text" = "Tap the Heart  button  to add it to your favorites";
+
+/* Class = "UILabel"; text = "Food"; ObjectID = "5tP-2T-Ql5"; */
+"5tP-2T-Ql5.text" = "Food";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8di-D7-Vce"; */
+"8di-D7-Vce.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "97a-98-VMw"; */
+"97a-98-VMw.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Explore Minsk"; ObjectID = "9C0-vj-63c"; */
+"9C0-vj-63c.title" = "Explore Minsk";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9U4-zg-SXU"; */
+"9U4-zg-SXU.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Forgot password?"; ObjectID = "AMC-Oa-IhC"; */
+"AMC-Oa-IhC.configuration.title" = "Forgot password?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AMC-Oa-IhC"; */
+"AMC-Oa-IhC.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "CmU-OW-uUG"; */
+"CmU-OW-uUG.text" = "Light";
+
+/* Class = "UIButton"; configuration.title = "Sign Out"; ObjectID = "DnY-RJ-Q7b"; */
+"DnY-RJ-Q7b.configuration.title" = "Sign Out";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DnY-RJ-Q7b"; */
+"DnY-RJ-Q7b.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "ERd-40-Xec"; */
+"ERd-40-Xec.text" = "Address";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Eff-ib-NMF"; */
+"Eff-ib-NMF.title" = "Settings";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "F7O-7g-hOv"; */
+"F7O-7g-hOv.placeholder" = "example@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "H6h-H9-f8G"; */
+"H6h-H9-f8G.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Facilities"; ObjectID = "H93-tV-XY8"; */
+"H93-tV-XY8.text" = "Facilities";
+
+/* Class = "UINavigationItem"; title = "Edit Profile"; ObjectID = "HCl-8c-tNk"; */
+"HCl-8c-tNk.title" = "Edit Profile";
+
+/* Class = "UILabel"; text = "Plan your"; ObjectID = "JNe-9W-X34"; */
+"JNe-9W-X34.text" = "Plan your";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "Jk4-H5-wj7"; */
+"Jk4-H5-wj7.text" = "Don't have an account?";
+
+/* Class = "UILabel"; text = "⭐️ 4.7 (4K Reviews)"; ObjectID = "KeE-Ye-mrz"; */
+"KeE-Ye-mrz.text" = "⭐️ 4.7 (4K Reviews)";
+
+/* Class = "UILabel"; text = "Luxurious\nVacation"; ObjectID = "L89-JF-isR"; */
+"L89-JF-isR.text" = "Luxurious\nVacation";
+
+/* Class = "UISegmentedControl"; MhT-x2-vpa.segmentTitles[0] = "Location"; ObjectID = "MhT-x2-vpa"; */
+"MhT-x2-vpa.segmentTitles[0]" = "Location";
+
+/* Class = "UISegmentedControl"; MhT-x2-vpa.segmentTitles[1] = "Hotels"; ObjectID = "MhT-x2-vpa"; */
+"MhT-x2-vpa.segmentTitles[1]" = "Hotels";
+
+/* Class = "UISegmentedControl"; MhT-x2-vpa.segmentTitles[2] = "Food"; ObjectID = "MhT-x2-vpa"; */
+"MhT-x2-vpa.segmentTitles[2]" = "Food";
+
+/* Class = "UISegmentedControl"; MhT-x2-vpa.segmentTitles[3] = "Adventure"; ObjectID = "MhT-x2-vpa"; */
+"MhT-x2-vpa.segmentTitles[3]" = "Adventure";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "NWv-ya-dM3"; */
+"NWv-ya-dM3.text" = "Phone";
+
+/* Class = "UILabel"; text = "System"; ObjectID = "NfT-6g-r1U"; */
+"NfT-6g-r1U.text" = "System";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "OGd-58-nFu"; */
+"OGd-58-nFu.text" = "Email";
+
+/* Class = "UIButton"; configuration.title = "Rate"; ObjectID = "PSz-ch-8Hp"; */
+"PSz-ch-8Hp.configuration.title" = "Rate";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PSz-ch-8Hp"; */
+"PSz-ch-8Hp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Troitskoe suburb"; ObjectID = "PXD-b3-IVx"; */
+"PXD-b3-IVx.text" = "Troitskoe suburb";
+
+/* Class = "UILabel"; text = "+375-29-16-11-888"; ObjectID = "Q3G-sF-Fnc"; */
+"Q3G-sF-Fnc.text" = "+375-29-16-11-888";
+
+/* Class = "UILabel"; text = "Rate this place"; ObjectID = "RyZ-7f-ZKt"; */
+"RyZ-7f-ZKt.text" = "Rate this place";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SCc-fU-wrT"; */
+"SCc-fU-wrT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "M I N S K"; ObjectID = "SNq-Zk-uDB"; */
+"SNq-Zk-uDB.text" = "M I N S K";
+
+/* Class = "UILabel"; text = "syskirill1@gmail.com"; ObjectID = "ShT-0t-nGc"; */
+"ShT-0t-nGc.text" = "syskirill1@gmail.com";
+
+/* Class = "UIButton"; configuration.title = "Language"; ObjectID = "TjQ-38-13J"; */
+"TjQ-38-13J.configuration.title" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TjQ-38-13J"; */
+"TjQ-38-13J.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Tor-DB-pQR"; */
+"Tor-DB-pQR.text" = "Email";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "UaD-EY-TXR"; */
+"UaD-EY-TXR.title" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Uh7-kq-PP8"; */
+"Uh7-kq-PP8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Password must be 6 characters or more"; ObjectID = "V0W-JW-3Wr"; */
+"V0W-JW-3Wr.text" = "Password must be 6 characters or more";
+
+/* Class = "UIButton"; configuration.title = "Send mail"; ObjectID = "VHe-e8-beK"; */
+"VHe-e8-beK.configuration.title" = "Send mail";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VHe-e8-beK"; */
+"VHe-e8-beK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "REWARDS"; ObjectID = "Vb1-wP-kUx"; */
+"Vb1-wP-kUx.text" = "REWARDS";
+
+/* Class = "UILabel"; text = "About app"; ObjectID = "WlR-Lw-bXM"; */
+"WlR-Lw-bXM.text" = "About app";
+
+/* Class = "UILabel"; text = "Popular"; ObjectID = "WyA-fy-yJZ"; */
+"WyA-fy-yJZ.text" = "Popular";
+
+/* Class = "UILabel"; text = "Incorrect email"; ObjectID = "X2I-Hj-IVH"; */
+"X2I-Hj-IVH.text" = "Incorrect email";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y4e-Hb-8Mn"; */
+"Y4e-Hb-8Mn.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Explore Minsk"; ObjectID = "ZA3-GD-Zwi"; */
+"ZA3-GD-Zwi.text" = "Explore Minsk";
+
+/* Class = "UIButton"; configuration.title = "Language"; ObjectID = "bYm-jz-Uoz"; */
+"bYm-jz-Uoz.configuration.title" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bYm-jz-Uoz"; */
+"bYm-jz-Uoz.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "See all"; ObjectID = "dRb-7E-lfQ"; */
+"dRb-7E-lfQ.configuration.title" = "See all";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dRb-7E-lfQ"; */
+"dRb-7E-lfQ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "National Art Museum"; ObjectID = "f9b-x6-pxX"; */
+"f9b-x6-pxX.text" = "National Art Museum";
+
+/* Class = "UILabel"; text = "1.0"; ObjectID = "g9T-2W-Eya"; */
+"g9T-2W-Eya.text" = "1.0";
+
+/* Class = "UITextField"; placeholder = "6 or more characters"; ObjectID = "gg5-b0-RBa"; */
+"gg5-b0-RBa.placeholder" = "6 or more characters";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "ha4-iQ-d0m"; */
+"ha4-iQ-d0m.text" = "Version";
+
+/* Class = "UILabel"; text = "M I N S K"; ObjectID = "hba-Ig-Gch"; */
+"hba-Ig-Gch.text" = "M I N S K";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "ho1-Bu-GYw"; */
+"ho1-Bu-GYw.title" = "Favorites";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iYU-HN-TuO"; */
+"iYU-HN-TuO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "The hotel provides complete amenities and friendly service. Guests appreciate the clean, spacious rooms and convenient location near the city center and public transport."; ObjectID = "jP3-A5-6bc"; */
+"jP3-A5-6bc.text" = "The hotel provides complete amenities and friendly service. Guests appreciate the clean, spacious rooms and convenient location near the city center and public transport.";
+
+/* Class = "UILabel"; text = "⭐️ 4.1"; ObjectID = "k7s-RR-V3L"; */
+"k7s-RR-V3L.text" = "⭐️ 4.1";
+
+/* Class = "UIButton"; configuration.title = "See all"; ObjectID = "m3P-Zh-vj0"; */
+"m3P-Zh-vj0.configuration.title" = "See all";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "m3P-Zh-vj0"; */
+"m3P-Zh-vj0.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "E-Mail"; ObjectID = "maU-Gb-oxY"; */
+"maU-Gb-oxY.placeholder" = "E-Mail";
+
+/* Class = "UILabel"; text = "Theme"; ObjectID = "mfm-nu-pZr"; */
+"mfm-nu-pZr.text" = "Theme";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "muR-Y8-KQw"; */
+"muR-Y8-KQw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "M I N S K"; ObjectID = "nkm-Ya-uki"; */
+"nkm-Ya-uki.text" = "M I N S K";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "o4H-ga-woh"; */
+"o4H-ga-woh.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "o4H-ga-woh"; */
+"o4H-ga-woh.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oNZ-kB-2pE"; */
+"oNZ-kB-2pE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Sorry, you don’t have any favorites yet"; ObjectID = "oRA-zp-Fv2"; */
+"oRA-zp-Fv2.text" = "Sorry, you don’t have any favorites yet";
+
+/* Class = "UILabel"; text = "Troitskoe suburb"; ObjectID = "oyH-ZU-SYU"; */
+"oyH-ZU-SYU.text" = "Troitskoe suburb";
+
+/* Class = "UILabel"; text = "Wi-Fi"; ObjectID = "pbo-0h-jR2"; */
+"pbo-0h-jR2.text" = "Wi-Fi";
+
+/* Class = "UIButton"; configuration.title = "Explore"; ObjectID = "phA-oG-M9W"; */
+"phA-oG-M9W.configuration.title" = "Explore";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "phA-oG-M9W"; */
+"phA-oG-M9W.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "r2a-Bn-N4U"; */
+"r2a-Bn-N4U.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uVY-En-uc1"; */
+"uVY-En-uc1.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Save changes"; ObjectID = "uVf-xH-Spd"; */
+"uVf-xH-Spd.configuration.title" = "Save changes";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uVf-xH-Spd"; */
+"uVf-xH-Spd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "⭐️ 4.1"; ObjectID = "uk2-k5-EJG"; */
+"uk2-k5-EJG.text" = "⭐️ 4.1";
+
+/* Class = "UILabel"; text = "1-2 hours"; ObjectID = "uwS-kd-s59"; */
+"uwS-kd-s59.text" = "1-2 hours";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "vff-6s-PX1"; */
+"vff-6s-PX1.text" = "Name";
+
+/* Class = "UILabel"; text = "Lenina street 20"; ObjectID = "viG-AP-d0x"; */
+"viG-AP-d0x.text" = "Lenina street 20";
+
+/* Class = "UILabel"; text = "Recommended sightseeing time"; ObjectID = "wAG-W3-oU6"; */
+"wAG-W3-oU6.text" = "Recommended sightseeing time";
+
+/* Class = "UILabel"; text = "Incorrect email"; ObjectID = "wR1-wM-MKg"; */
+"wR1-wM-MKg.text" = "Incorrect email";
+
+/* Class = "UILabel"; text = "Dark"; ObjectID = "yzw-FR-BR7"; */
+"yzw-FR-BR7.text" = "Dark";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "ziq-rl-9k9"; */
+"ziq-rl-9k9.text" = "Password";
+
+/* Class = "UILabel"; text = "Hot Deal"; ObjectID = "zmR-nw-GiZ"; */
+"zmR-nw-GiZ.text" = "Hot Deal";

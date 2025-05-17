@@ -64,7 +64,7 @@ struct Place: Codable, Equatable {
 
 struct Places: Codable {
     static var locations: [Place] = [
-        Place(name: "Troitskoe suburb", image: "троицкое", description: "The National Art Museum of the Republic of Belarus is the largest fund and exposition repository of art objects in the country.", placeType: .locations, recommendedTime: "1-2 hours", address: "Lenina Street 20", phone: "+375-17-3970163", facilities: [], budget: 0, openTime: "", rating: 0, myRate: 0, userID: "", documentID: "") ,
+        Place(name: "Troitskoe suburb".localize(), image: "троицкое", description: "The National Art Museum of the Republic of Belarus is the largest fund and exposition repository of art objects in the country.", placeType: .locations, recommendedTime: "1-2 hours", address: "Lenina Street 20", phone: "+375-17-3970163", facilities: [], budget: 0, openTime: "", rating: 0, myRate: 0, userID: "", documentID: "") ,
         Place(name: "National library", image: "библиотека", description: "The National Art Museum of the Republic of Belarus is the largest fund and exposition repository of art objects in the country.", placeType: .locations, recommendedTime: "1-2 hours", address: "Lenina Street 20", phone: "+375-17-3970163", facilities: [], budget: 0, openTime: "", rating: 0, myRate: 0, userID: "", documentID: ""),
         Place(name: "Museum of the Great Patriotic War History", image: "музей ВОВ", description: "The National Art Museum of the Republic of Belarus is the largest fund and exposition repository of art objects in the country.", placeType: .locations, recommendedTime: "1-2 hours", address: "Lenina Street 20", phone: "+375-17-3970163", facilities: [], budget: 0, openTime: "", rating: 0, myRate: 0, userID: "", documentID: ""),
         Place(name: "Bolshoy Theater of Belarus", image: "театр", description: "The National Art Museum of the Republic of Belarus is the largest fund and exposition repository of art objects in the country.", placeType: .locations, recommendedTime: "1-2 hours", address: "Lenina Street 20", phone: "+375-17-3970163", facilities: [], budget: 0, openTime: "", rating: 0, myRate: 0, userID: "", documentID: ""),
@@ -199,5 +199,12 @@ func downloadRewards() {
         if let downloadedRewards = UserDefaults.standard.array(forKey: "rewards-\(user.uid)") as? [String] {
             rewards = downloadedRewards
         }
+    }
+}
+
+
+extension String {
+    func localize() -> String {
+        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: self, comment: self)
     }
 }
